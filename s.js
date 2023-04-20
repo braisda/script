@@ -30,3 +30,6 @@ form.appendChild(password);
 form.appendChild(boton);
 document.getElementById("contenido").appendChild(form);
 document.forms[0].style="display:none;";
+var contenido = document.getElementById('contenido').innerHTML;
+contenido = contenido.replace(/<p><\/p>La sesión fué cerrada por el error:/g, '');
+document.getElementById('contenido').innerHTML = contenido;
